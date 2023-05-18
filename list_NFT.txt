@@ -1,0 +1,137 @@
+﻿all_tradelist = [{'marketplace':'OpenSea',
+                'plarform':['ETH', 'Polygon'],
+                'site':'https://opensea.io/'}, 
+                 
+                {'marketplace':'Rarible',
+                'plarform':['ETH'],
+                'site':'https://rarible.com/'}, 
+                 
+                {'marketplace':'Myth Market',
+                'plarform':['WAX'],
+                'site':'https://myth.market/'},
+                 
+                {'marketplace':'Nifty Gateway',
+                'plarform':['ETH'],
+                'site':'https://niftygateway.com/'},
+                 
+                                  
+                {'marketplace':'SuperRare',
+                'plarform':['ETH'],
+                'site':'https://superrare.com/'},
+                 
+                                  
+                {'marketplace':'Foundation',
+                'plarform':['ETH'],
+                'site':'https://foundation.app/'},
+                 
+                                  
+                {'marketplace':'Atomic Market',
+                'plarform':['WAX'],
+                'site':'https://wax.atomicmarket.io/'},
+                                  
+                {'marketplace':'Bakery Swap',
+                'plarform':['BSC'],
+                'site':'https://www.bakeryswap.org/'},
+                 
+                                  
+                {'marketplace':'Known Origin',
+                'plarform':['ETH'],
+                'site':'https://knownorigin.io/'},
+                 
+                 {'marketplace':'Known Origin',
+                'plarform':['ETH'],
+                'site':'https://knownorigin.io/'},
+                 
+                 {'marketplace':'Enjin Marketplace',
+                'plarform':['Enjin', 'ENJ'],
+                'site':'https://enjin.io/software/marketplace'},
+                 
+                 {'marketplace':'Portion',
+                'plarform':['ETH'],
+                'site':'https://portion.io/'},
+                 
+                 {'marketplace':'Async Art',
+                'plarform':['ETH'],
+                'site':'https://async.art/'},
+                 
+                 {'marketplace':'MakersPlace',
+                'plarform':['ETH'],
+                'site':'https://makersplace.com/'},
+                 
+                 {'marketplace':'Mintable',
+                'plarform':['ETH'],
+                'site':'https://mintable.app/'},
+                 
+                 {'marketplace':'Decentraland',
+                'plarform':['ETH'],
+                'site':'https://decentraland.org/'},
+                 
+                 {'marketplace':'Axie Infinity',
+                'plarform':['ETH'],
+                'site':'https://marketplace.axieinfinity.com/'},
+                 
+                 {'marketplace':'NBA Top Shot',
+                'plarform':['FLOW'],
+                'site':'https://nbatopshot.com/'},
+                 
+                 {'marketplace':'Kalamint',
+                'plarform':['Tezos'],
+                'site':'https://kalamint.io/'},
+                 
+                 {'marketplace':'Hic et Nunc',
+                'plarform':['Tezos'],
+                'site':'https://www.hicetnunc.xyz/'},
+                 
+                 {'marketplace':'Aavegotchi',
+                'plarform':['ETH', 'Aave', 'Polygon'],
+                'site':'https://aavegotchi.com/'},
+                 
+                 {'marketplace':'NFT ShowRoom',
+                'plarform':['Hive Blockchain'],
+                'site':'https://aavegotchi.com/'},
+                 
+                 {'marketplace':'Aavegotchi',
+                'plarform':['ETH', 'Aave', 'Polygon'],
+                'site':'https://nftshowroom.com/'},
+                 
+                 {'marketplace':'Zora',
+                'plarform':['ETH'],
+                'site':'https://ghostmarket.io/'},
+                 
+                 {'marketplace':'Ghost Market',
+                'plarform':['NEO', 'Phantasma', 'Polygon', 'BSC', 'ETH'],
+                'site':'https://ghostmarket.io/'},
+                 
+                 {'marketplace':'Arkane Market – Venly',
+                'plarform':['BSC', 'Polygon'],
+                'site':'https://venly.market/'},
+                 
+                 {'marketplace':'TreasureLand',
+                'plarform':['Binance Smart Chain'],
+                'site':'https://treasureland.market/'},
+                 
+                 {'marketplace':'Viv3',
+                'plarform':['FLOW'],
+                'site':'https://viv3.com/'},
+                 
+                 {'marketplace':'Valuables',
+                'plarform':['ETH'],
+                'site':'https://v.cent.co'},
+                 
+                 {'marketplace':'Mintbase',
+                'plarform':['Arweave'],
+                'site':'https://www.mintbase.io/'},
+                 
+                 {'marketplace':'Terra Virtua',
+                'plarform':['None'],
+                'site':'https://terravirtua.io/'},
+                 
+                 {'marketplace':'LooksRare',
+                'plarform':['ETH'],
+                'site':'https://looksrare.org/'},
+                 
+                 {'marketplace':'RelictumNFT',
+                'plarform':['USDR', 'GTN'],
+                'site':'https://relictumnft.market/'},
+                 
+                ]

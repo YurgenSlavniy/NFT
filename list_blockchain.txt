@@ -1,0 +1,45 @@
+blockchain = [{'token': 'Bitcoin (BTC)', 
+	       'adress': 'https://www.blockchain.com/',
+		'wallets': ['Blockhain.com']}, 
+
+		{'token': 'Ethereum (ETH)', 
+	       'adress': 'https://etherscan.io/',
+		'wallets': ['Metamask', 'Trust Wallet', 'Math Wallet']}, 
+
+		{'token': 'Binance Coin (BNB)', 
+	       'adress': 'https://bscscan.com/',
+		'wallets': ['Metamask', 'Trust Wallet', 'Math Wallet']}, 
+
+		{'token': 'Solana (SOL)', 
+	       'adress': 'https://solscan.io/', 
+		'wallets': ['Phantom', 'Math Wallet']}, 
+
+		{'token': 'Cardano (ADA)', 
+	       'adress': 'https://cardanoscan.io/', 
+		'wallets': ['Yoroi', 'Nami Wallet']},
+
+		{'token': 'Polkadot (DOT)', 
+	       'adress': 'https://explorer.polkascan.io/', 
+		'wallets': ['Polkadot', 'Trust Wallet', 'Math Wallet']},
+
+		{'token': 'Terra (LUNA)', 
+	       'adress': 'https://finder.terra.money/', 
+		'wallets': ['Terra Station']},	
+
+		{'token': 'Avalanche (AVAX)', 
+	       'adress': 'https://avascan.info/', 
+		'wallets': [Metamask', 'Math Wallet', 'Avax Wallet (X,C,P - Chain']},
+
+		{'token': 'Polygon (Matic)', 
+	       'adress': 'https://polygonscan.com/', 
+		'wallets': ['Metamask', 'Trust Wallet', 'Math Wallet']},
+
+		{'token': 'Tron (TRON)', 
+	       'adress': 'https://tronscan.org/#/', 
+		'wallets': ['Tronlink', 'Trust Wallet', 'Math Wallet']},
+
+		{'token': 'Cosmos (ATOM)', 
+	       'adress': 'https://atomscan.com/', 
+		'wallets': ['Keystation', 'Math Wallet']},
+	
+]

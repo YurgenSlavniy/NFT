@@ -1,0 +1,152 @@
+1) захожу на сайт Rarible https://rarible.com/
+2) Вижу милую картинку Rarible Bear Pass  м сбоку данные. спарсю вручную
+- Minting now (мигает курсор)
+- заголовок: Rarible Bear Pass
+- by Rarible on Polygon
+- Описание: Once upon a time in the enchanted Web3 kingdom, a mischievius bear named Rarible delighted in bouncing from
+one lillpop tree to another spreading sugary joy wherever it roamed.
+- Чёрная кнопка: mint for free
+- нижняя строка с инфой: 209 minted 1per wallet 4d17h41m34s
+
+3) Жму на чёрную кнопку Mint for free
+Connect wallet
+Get started your Polygon wallet to sign messages and sent transactions
+
+popular:
+- Metamask
+- Coinbase Wallet
+- Wallet connect
+- show more 
+- cancel
+
+Так как в моём браузере в правом верхнем углу есть лисичка метамаска, которую я подключил желая заполучить спотти. 
+4) Жму на MetaMask
+В правом верхнем углу браузера открывается окошко с лисичкой:
+С возвращением! Децентрилизованная сеть ждёт вас
+- просит ввести пароль
+
+5) Ввожу пароль
+https://rarible.com
+Подключиться с помощью MetaMask
+Выберите счета(-а) для использования на этом сайте
+Новый счет
+
+Account 1 (0x8b4...deb2) 0 ETH
+Подключайтесь только к сайтам, которым доверяете.
+Подробнее
+Отмена
+Далее
+
+6) жму Далее
+Подключиться к Account 1 (0x8b4...deb2)
+Разрешить этому сайту:
+См. адрес, баланс счета, активность и инициируйте транзакции
+Подключайтесь только к сайтам, которым доверяете.
+Подробнее
+Отмена
+Подключиться
+
+7) Жму подключиться
+- Сеть Etherium Mainnent
+rarible.com
+https://rarible.com
+Разрешить этому сайту добавить сеть?
+Это позволит использовать эту сеть в MetaMask.
+MetaMask не проверяет пользовательские сети.
+Подробнее о мошенничестве и угрозах безопасности в сети.
+Имя сети
+Polygon Mainnet
+URL-адрес сети
+https://polygon-rpc.com/
+ID цепочки
+137
+Символ валюты
+MATIC
+Смотреть все сведения
+Отмена
+Одобрить
+
+8) Жму одобрить
+- Сеть Etherium Mainnent
+rarible.com
+https://rarible.com
+Разрешить этому сайту сменить сеть?
+В результате этого сеть, выбранная в MetaMask, будет изменена на ранее добавленную:
+Ethereum Mainnet
+->
+Polygon Mainnet
+Отмена
+Сменить сеть
+
+9) Жму Сменить сеть
+Вы переключились на
+
+Polygon Mainnet
+Что нужно помнить:
+• Нативный токен этой сети — MATIC. Этот токен используется для оплаты газа.
+• Попытка отправки активов напрямую из одной сети в другую может привести к необратимой потере активов. Следует использовать мост. Подробнее
+• Ваши токены могут не отображаться автоматически в вашем кошельке. Нажмите здесь, чтобы вручную добавить токены.
+Понятно
+
+10) Жму Понятно
+P
+Polygon Mainnet
+Account 1
+Баланс
+0 MATIC
+rarible.com
+https://rarible.com
+Запрос подписи
+Подписывайте это сообщение только в том случае, если вы полностью понимаете его содержание и доверяете запрашивающему сайту.
+Вы подписываете:
+Сообщение:
+I want to login on Rarible at 2023-05-16T19:40:06.800Z. I accept the Rarible Terms of Service https://static.rarible.com/terms.pdf and I am at least 13 years old.
+Отклонить
+Подписать
+
+11) Жму подписать
+You are almost there!
+Choose a display name and enter your email address to receive updates when your NFTs sell or receive offers.
+Display name
+Enter your email
+
+I have read and accept the Terms of Service, the Terms of Creator and confirm that I am at least 13 years old
+
+12) заполнил форму
+ввёл юзернейм Yurgenslavniy
+ввёл почту
+
+13) Вернулся на рарибл
+Исследую сайт. Особенно зелёный кружок в верхней части страницы сайта. 
+Похоже у меня появился профиль на сайте! 
+Я на рарибл!
+
+##############################################
+Кошелёк метамаск
+- polygon Mainnet
+
+Подключено
+
+Account 1
+0x8B4...deb2
+
+
+0
+MATIC
+
+$0.00
+USD
+
+Купить
+
+Отправить
+
+Обмен
+
+Bridge
+Активы
+NFT
+Активность
+У вас нет транзакций
+Нужна помощь? Обратитесь в служба поддержки MetaMask
+##############################################

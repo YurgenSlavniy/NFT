@@ -1,0 +1,497 @@
+# Как делать NFT коллекции на Солане Solana?
+
+### Площадка solsea.io
+
+Все коллекции явно простые. Мы видим:
+
+- Бэкграунд (фон)
+- Мишку
+- На него нацеплены разные украшения, головные уборы, одежда
+- меняется рот, меняется нос, глаза (мимика)
+
+### Как всё это делается? 
+### Как генерировать все эти NFT фишки? 
+### Как делать сайт на котором можно непосредственно подключать Pythom wallet или какой нибудь другой и минтить эти нфт?
+### Создавать нфт коллекцию не на solsea, а непосредственно на своём сайте?
+
+> https://www.bears.niftyally.com
+
+### С чего начать?
+
+Все эти коллекции используют движок METAPLEX.
+
+> https://www.Metaplex.com
+
+Это набор инструментов, которые позволяют делать
+NFT Minting веб сайты инструмент CandyMashine
+
+> https://docs.metaplex.com
+
+техническая документация. 
+
+Инструмент позволяющий делать минтинг веб сайты - Candy Machine v3
+Есть ещё один продукт, который позволяет делать метаплекс сторе промпт 
+Он больше предназначен для того чтобы продавать не коллекцию, а саму НФТ.
+ 
+> https://docs.metaplex.com/storefront/introduction
+
+### Подготовить и нарисовать коллекцию
+
+Есть директория DIR_Layers в который находятся следующие файлы и папки
+- DIR_background
+- DIR_Bober
+- DIR_Clothes
+- DIR_Eyes
+- DIR_item
+- DIR_mouth
+- DIR_Nose
+- DIR_Bober.psd
+
+Это отрисованная коллекция с бобрами.
+ 
+В папке DIR_background находятся файлы:
+- Acid#10.png 
+- Cosmo#10.png
+- Space#20.png
+и т.д.
+
+это бекграунды. Их порядка 10 шт. Эти Бекграунды будут выпадать у генерируемых нфтишках. 
+На каждом бэкграунде есть пометка - это его ратность. #10, #20 
+Это как шанс выпадания в процентах. 
+
+Теперь директория DIR_Bober c двумя файлами:
+- alfred#50.psd
+- Lenon#50.psd
+
+Это отрисованная голова бобра. У нас есть фльфред и ленон и шанс выпадения каждого #50
+
+Есть директоря DIR_Clothers в которой находятся такие же файлы формата PSD 
+и с параметром процента выпадения вероятности #40 #60 и т.д.
+В директории DIR_Eeys отрисованы также разные глаза и так во всех папках отрисованы 
+какие то элементы этого бобра. 
+Всё это делалось и отрисовывалось в фотошопе. 
+
+# УСТАНАВЛИВАЕМ SOFT
+
+https://docs.metaplex.com/candy-machine-v2/getting-started
+https://docs.solana.com/cli/install-solana-cli-tools
+
+https://phantom.app
+https://code.visualstudio.com
+https://git-scm.com/book/en/v2/Getting-Installing-Git
+https://nodejs.org/en/download
+https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable
+https://www.npmjs.com/packege/ts-node#installation
+
+https://github.com/Hashlips/Hashlips_art_engine.git
+https://github.com/metaplex-foundation/metaplex.git
+
+1) Сначала нам надо установить кошелёк https://phantom.app
+Это кошелёк на Солане. Там всё достаточно просто чтобы его установить. 
+Добавляем в расширения браузера и он появится в браузере 
+после установки недолгой и интуитивно понятной. 
+После установке в расширениях появился Phantom - кошелёк
+Захожу. 
+Добро пожаловать в Phantom Multichain
+Все ваши токены NFT от Solana, Etherium и Polygon в одном месте. Ваш единый кошелёк для всего.
+
+Совершите экскурсию:
+- Ешё более удобные мультиблокчейновые аккаунты. Аккаунты адаптированы для мультиблокчейна
+и у каждого из них теперь есть собственный адрес для ETH и Polygon
+- работаем со всеми. Фантом совместим со всеми приложениями на эфириум, полигон и солана. 
+Нажмите "подключиться к MetaMask" и можете приступать к работе. 
+- Мгновенный импорт из Метамаск. Импортируйте приватные ключи или секретные фразы из таких кошельков как
+метамаск, coinbase wallet. Всё в одном месте. 
+
+По красоте подключился кошелёк, на счету 0 ETH , 0 MATIC (Polygon), 0 SOL (SOLANA)
+
+Переходим в настройки кошелька (НПУ - нижний правый угол) кошелька  чтобы перейти в davnet
+Мы всё будем делать в дернете - это среда для разработки где вы себе можете дропнуть солану и 
+использовать сеть для разработки, чтобы не тратить реальные деньги на деплойтинге машин, 
+на комиссии и так далее.   
+
+Настройки -> Настройки разработчика -> Режим Testnet -> solana Devent
+
+Дальше у нас есть кошелёк и его адрес (вверху кошелька)
+Солана: BMFyZMdFQhHgB2FEVys9LyYAgEa3UK9PQ1i19TUUCSqr
+Эфириум: 0x09075D7b48c02C10B9cd41f70a28f89D86FA4C2E
+Полигон: 0x09075D7b48c02C10B9cd41f70a28f89D86FA4C2E
+
+# VISUAL STUDIO CODE 
+https://code.visualstudio.com
+Cкачал и устанавливаю интуитивно. Не хочу делать подробное описание. 
+жму завершить установку и запустить. открылось окно приложения!
+
+# Установка Гит. 
+Но я щас непосредственно в гите, поэтому опускаю описания. 
+
+# Устанавливаем Nodejs htttp://nodejs.org
+Идём на сайт, скачиваем инсталлер и всё должно инсталиться нативно и интуитивно понятно. 
+Пока так всё и происходит но в wndows PowerShell
+
+# Устанавливаем ярн https://classic.yarnpkg.com
+тут уже небольшой квест. Он устанавливается через менеджер пакетов nmp
+который поставляется в комплекте с nodejs
+
+Открываю ранее установленный ПУСК -> Node.js -> Node.js command prompt
+Устанавливается командой : npm install --global yarn
+Проверяю после установки командой: yarn --version
+
+# Установка npm  https://www.npmjs.com/pacege/ts-node#instalation
+Всё в той же командной строке Node.js
+> npm install -g typescript
+> npm install -g ts-node
+
+Загрузил пакеты всё получилось. 1 пакет первой командой, 19 пакетов второй командой.
+
+Всё это загружается и нужно для того, чтобы натсроить наше окружение.
+Этими инструментами будем пользоваться. 
+
+# ДАЛЬШЕ 
+Работаем в Visual studio code.
+Где нам нужно создать папку нашего проекта. 
+file -> open Folder в открывшемся окне создаём папку НФТ проекта
+(ВЛУ - верхний левый угол) появилась директория с проектом. 
+
+# ДАЛЬШЕ
+Открываем терминал в Visual studio Code
+(ВП - верхняя панель) -> Terminal -> New Terminal
+
+Сейчас мы будем заниматься Генерацией NFT. 
+Первым делом нам надо открыть терминал и установить в эту директорию гитхаб репозиторий. 
+будем делать клон репозитория. 
+Хорошо, что я есть в гитхабе, поэтому в поиске ввёл
+Hashlips/hashlips_art_engine  и нашёл  нужный репозиторий
+
+далее работаем в терминале открывшемся в Virtual Studio Code и в созданной ранее папке проекта.
+Переключаем консоль на гитбашовскую. В окне с консолью в верхней строке справа 
+написано в какой мы консоли и есть + стобы переключиться между консолями.
+
+>git clone https://github.com/HashLips/hashlips_art_engine.git
+
+Генерация НФТ. нам надо к примеру сгенерировать 10 000. 100 000 и тд. в большенстве случаев
+делается с помощью этого гитхаб репозитория. Существуют сайты, но зачастую они платные, 
+просят комиссии. Можно скачать репозиторий и сделать самому. 
+
+Сделали клон и у нас в визуал студии в правой части она появилась навигация по скаченным файлам.
+Репозиторий скачен. Мы можем зайти в визуал студио с помощью навигации, можем найти в виндоус эту папку.
+
+# ДАЛЕЕ
+Работаем в визуал студии в башконсоле в терминале
+> cd hashlips_art_engine
+
+Зашли в папку. 
+
+# ДАЛЕЕ
+Устанавливаем необходимые нам пакеты в визуал студии в башконсоле
+> npm install
+
+сталкнулся с тем что у меня не делается как на видео. Тут я встрял. 
+
+виртуал студия баш консоль
+> pip install node 
+
+Пакет какой то поставился но команда npm install снова не сработала. 
+
+После удаления пакета и переустановки скаченного пакета, в башконсоле в визуалстудио
+> npm install 
+
+Отработало как на видео!
+Скачиваем пакеты, которые приводят в действия все эти скрипты. 
+
+# Установили пакеты, которые приводят в действия скрипты в hashlips_art_engine
+> npm install в директории C:\Users\YurgenSlavniy\NFT\NFT_PROJECT_SOL\hashlips_art_engine
+через пауэр шелл.
+
+В директории DIR_hashlips_art_engine есть директория DIR_layers
+В ней находятся директори для примера.
+
+$ ls -la
+total 20
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20  ./
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20  ../
+-rw-r--r-- 1 YurgenSlavniy 197121 6148 May 17 14:23  .DS_Store
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20  Background/
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20 'Bottom lid'/
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20 'Eye color'/
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20  Eyeball/
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20  Goo/
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20  Iris/
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20  Shine/
+drwxr-xr-x 1 YurgenSlavniy 197121    0 May 17 16:20 'Top lid'/
+
+Нам нужно сделать точно такую же папку layers, также раскидать папки в нутри бекграунды, 
+итомы, которые будут меняться и т.д и поместить в них наш заготовленный нфт проект.
+
+копируем в эту папку файлы с нашей нфт, которую мы будем генерировать. 
+
+# ДАЛЕЕ
+заходим в DIR_hashlips_art_engine -> crs
+> cd crs
+
+$ ls -la
+total 24
+drwxr-xr-x 1 YurgenSlavniy 197121     0 May 17 16:20 ./
+drwxr-xr-x 1 YurgenSlavniy 197121     0 May 17 16:20 ../
+-rw-r--r-- 1 YurgenSlavniy 197121  2391 May 17 14:23 config.js
+-rw-r--r-- 1 YurgenSlavniy 197121 12729 May 17 14:23 main.js
+
+Нас интересует файл config.js
+Откроем его в консоле гитбаш в редакторе nano
+> Nano config.js
+##################################
+const basePath = process.cwd();
+const { MODE } = require(`${basePath}/constants/blend_mode.js`);
+const { NETWORK } = require(`${basePath}/constants/network.js`);
+
+const network = NETWORK.eth;
+
+// General metadata for Ethereum
+const namePrefix = "Your Collection";
+const description = "Remember to replace this description";
+const baseUri = "ipfs://NewUriToReplace";
+
+const solanaMetadata = {
+  symbol: "YC",
+  seller_fee_basis_points: 1000, // Define how much % you want from secondary m>
+  external_url: "https://www.youtube.com/c/hashlipsnft",
+  creators: [
+    {
+      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      share: 100,
+    },
+...
+##################################
+
+Нам нужно настроить конфигурацию нашего непосредственно нфт генератора. 
+изменяем параметр 
+**const network = NETWORK.eth; -> const network = NETWORK.sol;**
+
+мы меняем на дотсол
+В коллекции солана нфт коллекция должна начинаться с нуля. 0.pmg
+А в эфире она будет генерироваться с единички 
+
+# ДАЛЕЕ
+Заполняем следующие поля переменных
+- название коллекции
+- описание
+- наверное адрес коллекции в веб
+
+// General metadata for Ethereum
+const namePrefix = "Your Collection";
+const description = "Remember to replace this description";
+const baseUri = "ipfs://NewUriToReplace";
+
+->
+
+// General metadata for Ethereum
+const namePrefix = "Metagarage";
+const description = "My real garage will destroy, that is why i want replace my garage to metauniverse";
+const baseUri = "pass";
+
+Придумываем двух, трехзначный символ.
+
+const solanaMetadata = {
+  symbol: "YC"
+
+->
+
+const solanaMetadata = {
+  symbol: "GRG"
+
+# ДАЛЕЕ
+в этом же словаре видим ключ и значение
+seller_fee_basis_points: 1000, // Define how much % you want from secondary m>
+
+Сколько процентов будет получать автор с перепродажи данной нфт коллекции.
+1000 в данном коде значит 10%
+500 - 5%
+300 - 3%
+
+external_url: "https://www.youtube.com/c/hashlipsnft"
+
+это ссылка которая будет в каждой нфт
+как правило авторы публикуют ссылку на свой сайт. 
+
+creators: [
+    {
+      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      share: 100,
+    },
+
+в этот параметр нам надо поставить свой адрес.
+Заходм в фантом кошелёк, нажимаем на адрес сверху и копируем вставляем. 
+
+Если у нас несколько криейтерсов, мы можем сделать реализацию, 
+скопирповав и поставив распределения share:100 комиссии 50 на 50.
+Это комиссия - секонд ремаркинг сейлс
+при дальнейшей продаже нфт 50 % будет уходить первому автору, 50% второму автору.
+Разумеется ставится другой адрес соланакошелька в другом адресе
+
+creators: [
+    {
+      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      share: 50,
+    },
+    {
+      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      share: 50,
+    },
+
+Так как автор у нас один мы оставляем share:100% и один адрес
+
+const layerConfigurations = [
+  {
+    growEditionSizeTo: 5,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Eyeball" },
+      { name: "Eye color" },
+      { name: "Iris" },
+      { name: "Shine" },
+      { name: "Bottom lid" },
+      { name: "Top lid" },
+    ],
+  },
+
+Это коллекция нфт, которые мы будем генерировать
+
+growEditionSizeTo: 5 - сколько нфт мы хотим сгенерировать
+
+layersOrder:  - выжный момент. Список словарей. 
+Это непосредственно параметры нашей нфт
+Мы уже скопировали папку с лейерами 
+в проект и каждый словарь соответствует папке в DIR_Layers
+
+И так у нас все элементы коллекции разложены по своим папкам
+
+# ДАЛЕЕ
+
+const format = {
+  width: 512,
+  height: 512,
+  smoothing: false,
+};
+
+Это формат наших изображений
+Как правило большенство нфт на опенси, и других ресурсах
+отрисованы в этом формате, потому что слишком большие картинки не выгодны.
+Так как за них нужно платить, когда мы деплоим наш проект нужно платить за каждый мегабайт.
+Чем меньше весит коллекция , тем дешевле обойдётся.
+
+const gif = {
+  export: false,
+  repeat: 0,
+  quality: 100,
+  delay: 500,
+};
+
+Функция гиф. Можно создать гиф анимацию
+Нужно будет указать repeat: 0, - насколько часто она будет повторяться
+0 - бесконечно. repeat: -1 - 1раз
+Это нужно покапаться - вся информация на гитхабе. 
+
+# ДАЛЕЕ
+
+Чтобы запустить генератор в визуал студии в терминале
+> node index.js
+
+У нас должны сгенерироваться картинки. 
+Картинки должны находиться по адресу
+C:\Users\YurgenSlavniy\NFT\NFT_PROJECT_SOL\hashlips_art_engine\build\images
+
+Помимо картинок и папки imsges у нас сгенерировался json в котором указана 
+метадата нашей НФТ
+Чтобы проверитиь, можем зайти в документацию кэнди машин на метаплексе 
+и там есть примеры
+CAndy MAchine v2 -> preparing your Assets
+
+и у нас следующие параметры джейсона
+Метадата 0 джейсон должна иметь параметры
+
+name: имя картинки и что это первая нфт.
+symbol:
+discription:
+seller_fee_basis_points:
+image:"0.png" - самое главное, чтобы этот параметр совпадал. 
+uri: "0.png" Должно совпадать
+Есть криейтор адрес. 
+все названия картинок, когда мы создавали проект попали в атрибуты. 
+Если что то не так с нумерацией коллекции надо посмотреть в crs -> main.js
+найти момент, где добавляется метадата.
+
+const addMetadata = (_dna, _edition) -> {
+jet datatime = Date.now()
+jet tempMetadata = {
+	nane: `${namePrefix}# ${_edition + 1}
+...
+}
+}
+
+Исправили, приписав _edition + 1 вместо _edition
+
+const addMetadata = (_dna, _edition) => {
+  let dateTime = Date.now();
+  let tempMetadata = {
+    name: `${namePrefix} #${_edition}`,
+    description: description,
+    image: `${baseUri}/${_edition}.png`,
+    dna: sha1(_dna),
+    edition: _edition,
+    date: dateTime,
+    ...extraMetadata,
+
+->
+
+const addMetadata = (_dna, _edition) => {
+  let dateTime = Date.now();
+  let tempMetadata = {
+    name: `${namePrefix} #${_edition + 1}`,
+    description: description,
+    image: `${baseUri}/${_edition}.png`,
+    dna: sha1(_dna),
+    edition: _edition,
+    date: dateTime,
+    ...extraMetadata,
+
+# ДАЛЕЕ
+
+Чтобы files : [uri: 0.pmg] соответствовало имени в начале джейсона
+name: number #001 
+
+чтобы это была не нуевая картинка, а первая
+
+# ДАЛЕЕ
+
+в визуалстуди  вбаш панели
+> node index.js
+-> Идёт генерация новых картинок 
+
+и теперь в папке Json 
+в файле 0.json у нас в данных name: #1
+
+И в папке с картинками images у нас картинки от 0 до числа которое мы минтили
+
+# ДАЛЕЕ
+
+заходим в папку, где находятся наши картинки . 
+Мы находимся здесь 
+C:\Users\YurgenSlavniy\NFT\NFT_PROJECT_SOL\hashlips_art_engine
+
+создаём папку asset 
+> mkdir assets
+
+И поместить туда все наши сгенерированные картинки и джейсон файлы. 
+
+# ДАЛЕЕ
+
+следует заняться нстройкой кендимашины и генерацией нфт с джейсона + нашей картинки. 
+В полностью законченном проекте вы увидите готовый сайт, 
+на котором мы сможем нажимать кнопочку МИНТ
+Минтить
+Нфт будет переходить в наш фантом воллет
+
+Остаётся нам скопировать джейсоны с папки build в созданную папку DIR_assets.
+Эту папку в следующем видео поместим в наш проект.
+
+
